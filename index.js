@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(urlencoded({extended:true}));
 app.use(helmet());
-app.use(cors({origin:'https://thenet.netlify.app/',credentials:true}))
+app.use(cors({origin:'https://thenet.netlify.app',credentials:true}))
 app.use(morgan("dev"));
 
 app.use("/api/auth",urouter);
